@@ -1,5 +1,11 @@
 # webfuse changelog
 
+## 0.3.1 _(Fri Jum 05 2020)_
+
+### Fixes
+
+*   Fix meson build failure when gtest and jansson are not installed
+
 ## 0.3.0 _(Fri Jun 05 2020)_
 
 ### Breaking Changes
