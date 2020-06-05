@@ -76,7 +76,8 @@ webfuse_provider_static = static_library('webfuse_provider',
 
 webfuse_provider_static_dep = declare_dependency(
     include_directories: inc_dir,
-    link_with: webfuse_provider_static)
+    link_with: webfuse_provider_static,
+	dependencies: [webfuse_core_dep])
 
 webfuse_provider = shared_library('webfuse_provider',
     'lib/webfuse/provider/api.c',
@@ -137,7 +138,7 @@ webfuse_adapter_static = static_library('webfuse_adapter',
 webfuse_adapter_static_dep = declare_dependency(
 	include_directories: inc_dir,
 	link_with: [webfuse_adapter_static],
-	dependencies: [libfuse_dep])
+	dependencies: [webfuse_core_dep, libfuse_dep])
 
 webfuse_adapter = shared_library('webfuse_adapter',
     'lib/webfuse/adapter/api.c',
@@ -170,7 +171,7 @@ endif
 if not without_tests
 
 gtest_dep = dependency('gtest', version: '>=1.10.0', fallback: ['gtest', 'gtest_dep']) 
-gmock_main_dep = dependency('gmock_main', version: '>=1.10.0', fallback: ['gtest', 'gmock_main_main_dep'])
+gmock_main_dep = dependency('gmock_main', version: '>=1.10.0', fallback: ['gtest', 'gmock_main_dep'])
 
 fscheck = executable('fs_check',
 	'test/webfuse/tests/integration/fs_check.c')
