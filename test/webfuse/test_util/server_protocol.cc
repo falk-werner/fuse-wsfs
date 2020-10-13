@@ -85,7 +85,6 @@ ServerProtocol::Private::Private()
     info.port = 0;
     info.protocols = protocols;
     info.vhost_name = "localhost";
-    info.ws_ping_pong_interval = 10;
     info.options = LWS_SERVER_OPTION_HTTP_HEADERS_SECURITY_BEST_PRACTICES_ENFORCE;
     info.options |= LWS_SERVER_OPTION_EXPLICIT_VHOSTS;
 

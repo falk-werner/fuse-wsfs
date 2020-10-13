@@ -54,7 +54,6 @@ static struct lws_context * wf_impl_server_context_create(
 	server->info.mounts = &server->mount;
 	server->info.protocols = server->ws_protocols;
 	server->info.vhost_name = server->config.vhost_name;
-	server->info.ws_ping_pong_interval = 10;
 	server->info.options = LWS_SERVER_OPTION_HTTP_HEADERS_SECURITY_BEST_PRACTICES_ENFORCE;
 	server->info.options |= LWS_SERVER_OPTION_EXPLICIT_VHOSTS;
 
