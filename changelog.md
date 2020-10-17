@@ -1,5 +1,9 @@
 # webfuse changelog
 
+## 0.5.1 _(Sat Oct 17 2020)_
+
+*   __Fix:__ Fix compatibilty issue with libwebsockets 4.1.3 (removed obsolete ping-pong interval)
+
 ## 0.5.0 _(Sun Jul 19 2020)_
 
 *   __Feature:__ Remove dependency to libjansson
