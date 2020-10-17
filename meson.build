@@ -1,4 +1,4 @@
-project('webfuse', 'c', 'cpp', version: '0.5.0', license: 'LGPL-3.0+')
+project('webfuse', 'c', 'cpp', version: '0.5.1', license: 'LGPL-3.0+')
 
 without_tests = get_option('without_tests')
 
